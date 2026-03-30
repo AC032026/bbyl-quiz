@@ -244,6 +244,7 @@ const questions = [
   {
     category: "Action",
     text: "How long have you been thinking seriously about making this transition?",
+    helper: ""Seriously" means more than a passing thought — it means you've researched it, talked about it, or taken at least one step toward it.",
     options: [
       { text: "I'm already building — I've taken real concrete steps in the last 90 days", score: 3 },
       { text: "Less than 6 months — this is newer but I'm taking it seriously", score: 2 },
@@ -290,6 +291,7 @@ function renderQuestion() {
   document.getElementById('q-count').textContent = (current + 1) + ' of ' + questions.length;
   document.getElementById('progress-fill').style.width = (((current + 1) / questions.length) * 100) + '%';
 
+  document.getElementById('q-text').textContent = q.text;
   const optContainer = document.getElementById('q-options');
   optContainer.innerHTML = '';
   q.options.forEach(function(opt, i) {
