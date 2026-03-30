@@ -293,6 +293,7 @@ function renderQuestion() {
 
   document.getElementById('q-text').textContent = q.text;
   const optContainer = document.getElementById('q-options');
+  document.getElementById('q-text').textContent = q.text;
   optContainer.innerHTML = '';
   q.options.forEach(function(opt, i) {
     const div = document.createElement('div');
