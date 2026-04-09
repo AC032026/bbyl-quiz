@@ -22,6 +22,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
 .gold-bar { width: 40px; height: 2px; background: var(--gold); margin: 0 auto 28px; }
 .screen { display: none; }
 .screen.active { display: block; }
+
+/* INTRO */
 .intro-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 7vw, 58px); font-weight: 600; line-height: 1.1; color: var(--white); margin-bottom: 8px; }
 .intro-headline em { font-style: italic; color: var(--gold); }
 .intro-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 20px 0 36px; }
@@ -32,12 +34,27 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
 .btn-primary { display: block; width: 100%; background: var(--gold); color: var(--navy-deep); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; padding: 18px 32px; border: none; border-radius: 8px; cursor: pointer; text-align: center; margin-bottom: 16px; }
 .btn-primary:hover { background: var(--gold-light); }
 .intro-note { text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 20px; padding-bottom: 40px; }
+
+/* EMAIL CAPTURE — Screen 2 */
+.email-wrap { padding: 40px 0 48px; text-align: center; }
+.email-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 40px); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+.email-headline em { font-style: italic; color: var(--gold); }
+.email-sub { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 32px; line-height: 1.6; }
+.form-group { margin-bottom: 14px; text-align: left; }
+.form-group label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+.form-group input { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--white); outline: none; }
+.form-group input:focus { border-color: var(--gold); }
+.privacy-note { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 12px; line-height: 1.5; }
+
+/* PRE-QUIZ — Screen 3 */
 .pre-quiz-wrap { padding: 40px 0 48px; }
 .pre-quiz-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 40px); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 24px; text-align: center; }
 .pre-quiz-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,168,152,0.2); border-radius: 14px; padding: 28px; margin-bottom: 32px; }
 .pre-quiz-box p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.75; margin-bottom: 14px; }
 .pre-quiz-box p:last-child { margin-bottom: 0; }
 .pre-quiz-box p strong { color: var(--white); font-weight: 500; }
+
+/* QUIZ */
 .progress-wrap { padding: 32px 0 24px; }
 .progress-meta { display: flex; justify-content: space-between; margin-bottom: 10px; }
 .progress-label { font-size: 12px; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
@@ -59,14 +76,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
 .btn-back { background: transparent; color: rgba(255,255,255,0.4); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 16px 24px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer; flex-shrink: 0; }
 .btn-next { flex: 1; background: var(--gold); color: var(--navy-deep); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; padding: 16px 24px; border: none; border-radius: 8px; cursor: pointer; opacity: 0.4; pointer-events: none; }
 .btn-next.enabled { opacity: 1; pointer-events: all; }
-.email-wrap { padding: 40px 0 48px; text-align: center; }
-.email-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 40px); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
-.email-sub { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 32px; line-height: 1.6; }
-.form-group { margin-bottom: 14px; text-align: left; }
-.form-group label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
-.form-group input { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--white); outline: none; }
-.form-group input:focus { border-color: var(--gold); }
-.privacy-note { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 12px; line-height: 1.5; }
+
+/* RESULTS */
 .results-wrap { padding: 40px 0 0; text-align: center; }
 .result-badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; }
 .badge-ready { background: rgba(100,180,100,0.15); color: #7EC87E; border: 1px solid rgba(100,180,100,0.3); }
@@ -116,7 +127,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
     <div class="intro-note">Your personalized results + action plan delivered at the end.</div>
   </div>
 
-  <!-- SCREEN 2: Pre-Quiz Instructions -->
+  <!-- SCREEN 2: Email Capture — BEFORE quiz -->
+  <div class="screen" id="screen-email">
+    <div class="email-wrap">
+      <h2 class="email-headline">Before we begin,<br><em>let's make it personal.</em></h2>
+      <p class="email-sub">Drop your name and email below. Your personalized readiness snapshot and recommended next step will be waiting for you at the end.</p>
+      <div class="form-group"><label>First Name</label><input type="text" id="input-name" placeholder="Your first name"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" id="input-email" placeholder="your@email.com"></div>
+      <button class="btn-primary" id="email-next-btn" style="margin-top:20px;">Continue &rarr;</button>
+      <p class="privacy-note">No spam. Ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: Pre-Quiz Instructions -->
   <div class="screen" id="screen-prequiz">
     <div class="pre-quiz-wrap">
       <h2 class="pre-quiz-headline">Before You Begin</h2>
@@ -130,7 +153,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
     </div>
   </div>
 
-  <!-- SCREEN 3: Quiz Questions -->
+  <!-- SCREEN 4: Quiz Questions -->
   <div class="screen" id="screen-quiz">
     <div class="progress-wrap">
       <div class="progress-meta">
@@ -147,18 +170,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy-deep); color: 
     <div class="nav-row">
       <button class="btn-back" id="btn-back">Back</button>
       <button class="btn-next" id="btn-next">Continue</button>
-    </div>
-  </div>
-
-  <!-- SCREEN 4: Email Capture -->
-  <div class="screen" id="screen-email">
-    <div class="email-wrap">
-      <h2 class="email-headline">Your results<br>are ready.</h2>
-      <p class="email-sub">Enter your name and email to unlock your personalized BBYL Method Readiness Score and your exact next step.</p>
-      <div class="form-group"><label>First Name</label><input type="text" id="input-name" placeholder="Your first name"></div>
-      <div class="form-group"><label>Email Address</label><input type="email" id="input-email" placeholder="your@email.com"></div>
-      <button class="btn-primary" id="results-btn" style="margin-top:20px;">Show My Results &rarr;</button>
-      <p class="privacy-note">No spam. Ever. Unsubscribe anytime.</p>
     </div>
   </div>
 
@@ -287,6 +298,14 @@ var userName = "";
 
 window.onload = function() {
   document.getElementById("start-btn").onclick = function() {
+    showScreen("screen-email");
+  };
+
+  document.getElementById("email-next-btn").onclick = function() {
+    var name = document.getElementById("input-name").value.trim();
+    var email = document.getElementById("input-email").value.trim();
+    if (!name || !email) { alert("Please enter your name and email to continue."); return; }
+    userName = name;
     showScreen("screen-prequiz");
   };
 
@@ -302,15 +321,7 @@ window.onload = function() {
   document.getElementById("btn-next").onclick = function() {
     if (answers[current] === undefined) return;
     if (current < questions.length - 1) { current++; renderQuestion(); }
-    else { showScreen("screen-email"); }
-  };
-
-  document.getElementById("results-btn").onclick = function() {
-    var name = document.getElementById("input-name").value.trim();
-    var email = document.getElementById("input-email").value.trim();
-    if (!name || !email) { alert("Please enter your name and email to see your results."); return; }
-    userName = name;
-    showResults();
+    else { showResults(); }
   };
 
   document.getElementById("share-btn").onclick = function() {
